@@ -67,7 +67,7 @@ def misplacedTiles(nodes, newnodes):
         nodes[i].h = hval
         nodes[i].f = nodes[i].g + nodes[i].h
         hval = 0
-    sorted_nodes = sorted(nodes, key=operator.attrgetter('f')) #Learned method from https://stackoverflow.com/questions/4010322/sort-a-list-of-class-instances-python
+    sorted_nodes = sorted(nodes, key=operator.attrgetter('f', 'g')) #Learned method from https://stackoverflow.com/questions/4010322/sort-a-list-of-class-instances-python
     return sorted_nodes
 
 
